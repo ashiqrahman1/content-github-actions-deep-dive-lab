@@ -26,7 +26,7 @@ jobs:
 
       - name: build site
         run: |
-          run ci
-          run build
+          npm ci
+          npm build
       - name: deploy file to S3
         run: aws s3 cp public s3://cfst-3457-174617004743c8cf78980be2a20e-prodbucket-1c37l0h5r7wbg/ --recursive --acl public-read
