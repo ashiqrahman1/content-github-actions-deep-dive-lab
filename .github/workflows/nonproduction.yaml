@@ -31,4 +31,4 @@ jobs:
           npm ci
           npm run-script build
       - name: deploy file to S3
-        run: aws s3 cp public s3://$BUCKET_NAME/ --recursive
+        run: aws s3 sync public s3://$BUCKET_NAME/ --recursive
