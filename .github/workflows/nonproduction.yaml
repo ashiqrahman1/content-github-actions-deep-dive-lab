@@ -5,10 +5,11 @@ on:
     branches:
       - feature*
 
+env:
+  BUCKET_NAME: cfst-3457-174617004743c8cf78980be2a20e-prodbucket-1c37l0h5r7wbg
+
 jobs:
   build:
-    env:
-      BUCKET_NAME: cfst-3457-174617004743c8cf78980be2a20e-prodbucket-1c37l0h5r7wbg
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
