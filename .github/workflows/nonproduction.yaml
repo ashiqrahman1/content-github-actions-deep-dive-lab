@@ -5,6 +5,8 @@ on:
     branches:
       - feature*
 
+env:
+  BUCKET_NAME: cfst-3457-9a47d50cfec28719547a3c5ec-nonprodbucket-1kw5y1kft12cp
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,4 +31,4 @@ jobs:
           npm ci
           npm run-script build
       - name: deploy file to S3
-        run: aws s3 cp public s3://${{env.BUCKET_NAME}}/ --recursive
+        run: aws s3 cp public s3://$BUCKET_NAME/ --recursive
